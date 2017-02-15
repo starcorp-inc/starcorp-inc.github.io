@@ -38,22 +38,20 @@ else {
 }
 
 function like() {
- $.get("http://ipinfo.io/", function(response) {
-  $.ajax("https://data.sparkfun.com/input/" + "NJb4Ed1oaKigpVl9p3QA?" + "private_key=5dmx78416oi6vAEMvYm0" + "&dislike=D0" + "&from=" + response.city + "&like=L1", {
+ $.ajax("https://data.sparkfun.com/input/" + "NJb4Ed1oaKigpVl9p3QA?" + "private_key=5dmx78416oi6vAEMvYm0" + "&dislike=D0" + "&from=" + "UNKNOWN" + "&like=L1", {
    type: 'POST'
   })
- }, "jsonp");
+ }
  var l1state = document.getElementById("l1").innerHTML
  document.getElementById("l1").innerHTML = ++l1state;
  document.cookie = "voted";
 }
 
 function dislike() {
- $.get("http://ipinfo.io/", function(response) {
-  $.ajax("https://data.sparkfun.com/input/" + "NJb4Ed1oaKigpVl9p3QA?" + "private_key=5dmx78416oi6vAEMvYm0" + "&dislike=D1" + "&from=" + response.city + "&like=L0", {
+ $.ajax("https://data.sparkfun.com/input/" + "NJb4Ed1oaKigpVl9p3QA?" + "private_key=5dmx78416oi6vAEMvYm0" + "&dislike=D1" + "&from=" + "UNKNOWN" + "&like=L0", {
    type: 'POST'
   })
- }, "jsonp");
+ }
  var d1state = document.getElementById("d1").innerHTML
  document.getElementById("d1").innerHTML = ++d1state;
  document.cookie = "voted";
